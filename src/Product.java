@@ -36,4 +36,19 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    public Product(int id, String name, int quantity, double price){
+        this.id = id;
+        this.name = name;
+        this.quantity = quantity;
+        this.price = price;
+    }
+
+    public String toString(){
+        return "Id: [" + id + "]\n" +
+                "Name: " + name + "\n" +
+                "Quantity: [" + quantity + "\n" +
+                "Price: [" + price + "\n";
+    }
+
 }
