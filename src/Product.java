@@ -21,12 +21,12 @@ public class Product {
         this.name = name;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public void addQuantity(int value){
+        this.quantity += value;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void removeQuantity(int value){
+        this.quantity -= value;
     }
 
     public double getPrice() {
