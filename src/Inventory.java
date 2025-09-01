@@ -10,21 +10,17 @@ public class Inventory {
         if(hashMap.putIfAbsent(product.getId(), product) == null){
             products.add(product);
         }
-        else{
-            Product exists = hashMap.get(product.getId());
-            exists.addQuantity(product.getQuantity());
-        }
     }
 
-    public void removeProduct(Product product){
-        Product exists = hashMap.get(product.getId());
+    public void removeProduct(int id){
+        Product exists = hashMap.get(id);
         if(exists == null){
             System.out.println("Error: product not found");
             return;
         }
 
-        products.remove(product);
-        hashMap.remove(product.getId(), product);
+        products.remove(id);
+        System.out.println("Product removed: " + exists.getName());
     }
 
     public void updateQuantity(int id, int quantity){
@@ -50,7 +46,7 @@ public class Inventory {
 
     public void showAllProducts(){
         for(Product list: products){
-            System.out.println(products);
+            System.out.println(list);
         }
     }
 

@@ -45,17 +45,20 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public Product(int id, String name, int quantity, double price){
+    public Product(int id, String name, int quantity,  double price){
         this.id = id;
         this.name = name;
+        this.quantity = quantity;
         this.price = price;
     }
 
-    public String toString(){
-        return "Id: [" + id + "]\n" +
-                "Name: " + name + "\n" +
-                "Quantity: [" + quantity + "\n" +
-                "Price: [" + price + "\n";
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", quantity=" + quantity +
+                ", price=" + price +
+                "\n";
     }
-
 }
