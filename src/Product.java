@@ -37,10 +37,17 @@ public class Product {
         this.price = price;
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     public Product(int id, String name, int quantity, double price){
         this.id = id;
         this.name = name;
-        this.quantity = quantity;
         this.price = price;
     }
 
