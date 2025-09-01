@@ -13,7 +13,7 @@ public class Inventory {
     }
 
     public void removeProduct(int id){
-        Product exists = hashMap.get(id);
+        Product exists = hashMap.remove(id);
         if(exists == null){
             System.out.println("Error: product not found");
             return;
